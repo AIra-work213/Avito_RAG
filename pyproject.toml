@@ -1,0 +1,19 @@
+[project]
+name = "avito-rag"
+version = "0.1.0"
+description = "RAG pipeline for Avito support articles search"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.0",
+    "pyarrow>=14.0",
+    "torch>=2.0",
+    "transformers>=4.40",
+    "sentence-transformers>=2.5",
+    "spacy>=3.7",
+    "catboost>=1.2",
+    "html2text>=2024.0",
+    "scikit-learn>=1.4",
+    "tqdm>=4.66",
+    "nltk>=3.8",
+    "einops>=0.8",
+]
