@@ -1,0 +1,44 @@
+Загрузка BM25-результатов...
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+Загрузка статей...
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+Загрузка запросов...
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+Загрузка релевантности...
+Загрузка эмбеддингов...
+Загрузка эмбеддингов из кэша...
+Загрузка title/body эмбеддингов...
+Загрузка токенизатора intfloat/multilingual-e5-small...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Загрузка модели intfloat/multilingual-e5-small...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3832.45it/s]
+Применение INT8-квантизации...
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/torch/ao/nn/quantized/modules/utils.py:72: UserWarning: torch.quantize_per_tensor, torch.quantize_per_channel and other quantized tensor creation functions that produce tensors with dtype torch.quint8, torch.qint8, and torch.qint32 are deprecated and will be removed in a future PyTorch release. Please see https://github.com/pytorch/pytorch/issues/184982 for more information. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/quantized/Quantizer.cpp:111.)
+  qweight = torch.quantize_per_tensor(
+Кодирование заголовков...
+Кодирование:   0%|          | 0/50 [00:00<?, ?it/s]Кодирование:   6%|▌         | 3/50 [00:00<00:02, 21.25it/s]Кодирование:  12%|█▏        | 6/50 [00:00<00:01, 22.48it/s]Кодирование:  18%|█▊        | 9/50 [00:00<00:01, 21.52it/s]Кодирование:  24%|██▍       | 12/50 [00:00<00:01, 20.73it/s]Кодирование:  30%|███       | 15/50 [00:00<00:01, 21.13it/s]Кодирование:  36%|███▌      | 18/50 [00:00<00:01, 21.23it/s]Кодирование:  42%|████▏     | 21/50 [00:00<00:01, 23.15it/s]Кодирование:  50%|█████     | 25/50 [00:01<00:00, 25.57it/s]Кодирование:  56%|█████▌    | 28/50 [00:01<00:00, 26.70it/s]Кодирование:  62%|██████▏   | 31/50 [00:01<00:00, 26.58it/s]Кодирование:  68%|██████▊   | 34/50 [00:01<00:00, 24.42it/s]Кодирование:  74%|███████▍  | 37/50 [00:01<00:00, 25.43it/s]Кодирование:  80%|████████  | 40/50 [00:01<00:00, 24.24it/s]Кодирование:  86%|████████▌ | 43/50 [00:01<00:00, 25.52it/s]Кодирование:  92%|█████████▏| 46/50 [00:01<00:00, 24.03it/s]Кодирование:  98%|█████████▊| 49/50 [00:02<00:00, 24.73it/s]Кодирование: 100%|██████████| 50/50 [00:02<00:00, 24.19it/s]
+Кодирование тел статей...
+Кодирование:   0%|          | 0/50 [00:00<?, ?it/s]Кодирование:   2%|▏         | 1/50 [00:01<01:05,  1.33s/it]Кодирование:   4%|▍         | 2/50 [00:02<00:56,  1.18s/it]Кодирование:   6%|▌         | 3/50 [00:05<01:29,  1.90s/it]Кодирование:   8%|▊         | 4/50 [00:08<01:57,  2.56s/it]Кодирование:  10%|█         | 5/50 [00:12<02:08,  2.86s/it]Кодирование:  12%|█▏        | 6/50 [00:15<02:14,  3.06s/it]Кодирование:  14%|█▍        | 7/50 [00:19<02:19,  3.25s/it]Кодирование:  16%|█▌        | 8/50 [00:22<02:17,  3.28s/it]Кодирование:  18%|█▊        | 9/50 [00:25<02:14,  3.28s/it]Кодирование:  20%|██        | 10/50 [00:29<02:11,  3.29s/it]Кодирование:  22%|██▏       | 11/50 [00:32<02:09,  3.33s/it]Кодирование:  24%|██▍       | 12/50 [00:36<02:09,  3.41s/it]Кодирование:  26%|██▌       | 13/50 [00:39<02:07,  3.45s/it]Кодирование:  28%|██▊       | 14/50 [00:43<02:06,  3.51s/it]Кодирование:  30%|███       | 15/50 [00:46<02:00,  3.44s/it]Кодирование:  32%|███▏      | 16/50 [00:50<02:00,  3.54s/it]Кодирование:  34%|███▍      | 17/50 [00:53<01:53,  3.43s/it]Кодирование:  36%|███▌      | 18/50 [00:56<01:47,  3.37s/it]Кодирование:  38%|███▊      | 19/50 [01:00<01:44,  3.37s/it]Кодирование:  40%|████      | 20/50 [01:03<01:41,  3.39s/it]Кодирование:  42%|████▏     | 21/50 [01:07<01:38,  3.39s/it]Кодирование:  44%|████▍     | 22/50 [01:10<01:34,  3.36s/it]Кодирование:  46%|████▌     | 23/50 [01:13<01:31,  3.38s/it]Кодирование:  48%|████▊     | 24/50 [01:17<01:32,  3.56s/it]Кодирование:  50%|█████     | 25/50 [01:21<01:31,  3.65s/it]Кодирование:  52%|█████▏    | 26/50 [01:25<01:28,  3.67s/it]Кодирование:  54%|█████▍    | 27/50 [01:28<01:24,  3.67s/it]Кодирование:  56%|█████▌    | 28/50 [01:32<01:20,  3.67s/it]Кодирование:  58%|█████▊    | 29/50 [01:36<01:17,  3.67s/it]Кодирование:  60%|██████    | 30/50 [01:40<01:14,  3.71s/it]Кодирование:  62%|██████▏   | 31/50 [01:44<01:12,  3.82s/it]Кодирование:  64%|██████▍   | 32/50 [01:47<01:08,  3.79s/it]Кодирование:  66%|██████▌   | 33/50 [01:51<01:03,  3.71s/it]Кодирование:  68%|██████▊   | 34/50 [01:54<00:57,  3.57s/it]Кодирование:  70%|███████   | 35/50 [01:58<00:52,  3.50s/it]Кодирование:  72%|███████▏  | 36/50 [02:01<00:48,  3.47s/it]Кодирование:  74%|███████▍  | 37/50 [02:04<00:44,  3.40s/it]Кодирование:  76%|███████▌  | 38/50 [02:07<00:40,  3.34s/it]Кодирование:  78%|███████▊  | 39/50 [02:11<00:37,  3.37s/it]Кодирование:  80%|████████  | 40/50 [02:14<00:34,  3.41s/it]Кодирование:  82%|████████▏ | 41/50 [02:18<00:31,  3.47s/it]Кодирование:  84%|████████▍ | 42/50 [02:21<00:27,  3.47s/it]Кодирование:  86%|████████▌ | 43/50 [02:24<00:23,  3.34s/it]Кодирование:  88%|████████▊ | 44/50 [02:28<00:19,  3.32s/it]Кодирование:  90%|█████████ | 45/50 [02:31<00:16,  3.22s/it]Кодирование:  92%|█████████▏| 46/50 [02:34<00:13,  3.28s/it]Кодирование:  94%|█████████▍| 47/50 [02:37<00:09,  3.29s/it]Кодирование:  96%|█████████▌| 48/50 [02:40<00:06,  3.20s/it]Кодирование:  98%|█████████▊| 49/50 [02:44<00:03,  3.23s/it]Кодирование: 100%|██████████| 50/50 [02:45<00:00,  2.72s/it]Кодирование: 100%|██████████| 50/50 [02:45<00:00,  3.31s/it]
+Построение карты статей...
+Построение признаков для calibration...
+  50000 строк, 500 запросов, 9 признаков: ['bm25_score', 'title_score', 'body_score', 'bm25_rank', 'article_len', 'query_len', 'len_ratio', 'dense_title_score', 'dense_body_score']
+Обучение финальной модели на всех calibration-данных...
+0:	total: 135ms	remaining: 1m 7s
+50:	total: 3.59s	remaining: 31.6s
+100:	total: 6.88s	remaining: 27.2s
+150:	total: 10.4s	remaining: 24s
+200:	total: 13.7s	remaining: 20.4s
+250:	total: 17.1s	remaining: 16.9s
+300:	total: 20.5s	remaining: 13.5s
+350:	total: 23.7s	remaining: 10s
+400:	total: 27.2s	remaining: 6.71s
+450:	total: 30.6s	remaining: 3.32s
+499:	total: 34s	remaining: 0us
+Предсказание для test-запросов...
+Сохранение answer.csv...
+Сохранён answer.csv: 500 запросов

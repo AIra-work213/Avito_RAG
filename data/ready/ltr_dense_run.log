@@ -1,0 +1,49 @@
+Загрузка BM25-результатов...
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+Загрузка статей...
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+Загрузка запросов...
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+Загрузка релевантности...
+Построение или загрузка эмбеддингов e5-small...
+Загрузка эмбеддингов из кэша...
+Построение карты статей (article_id → позиция в embedding-матрице)...
+Построение признаков для calibration...
+  50000 строк, 500 запросов, 9 признаков: ['bm25_score', 'title_score', 'body_score', 'bm25_rank', 'article_len', 'query_len', 'len_ratio', 'dense_score', 'dense_rank']
+Кросс-валидация (5-fold GroupKFold)...
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+  Фолд 1: MAP=0.4498
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+  Фолд 2: MAP=0.5459
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+  Фолд 3: MAP=0.5399
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+  Фолд 4: MAP=0.5195
+/home/aikira/Рабочий стол/projects/avito_RAG/.venv/lib/python3.12/site-packages/pandas/io/feather_format.py:178: FutureWarning: pyarrow.feather.read_table is deprecated as of 24.0.0. Use pyarrow.ipc.open_file() / RecordBatchFileReader instead. Feather V2 is the Arrow IPC file format.
+  pa_table = feather.read_table(
+  Фолд 5: MAP=0.5957
+CV MAP@10: 0.5302 +/- 0.0474
+Обучение финальной модели на всех calibration-данных...
+0:	total: 89.5ms	remaining: 44.7s
+50:	total: 3.76s	remaining: 33.1s
+100:	total: 7.5s	remaining: 29.6s
+150:	total: 11.1s	remaining: 25.6s
+200:	total: 14.9s	remaining: 22.1s
+250:	total: 18.5s	remaining: 18.3s
+300:	total: 22.1s	remaining: 14.6s
+350:	total: 25.8s	remaining: 10.9s
+400:	total: 29.5s	remaining: 7.28s
+450:	total: 33.1s	remaining: 3.6s
+499:	total: 36.8s	remaining: 0us
+Построение признаков для test и предсказание...
+Сохранение результата в answer.csv...
+Сохранён answer.csv: 500 запросов
